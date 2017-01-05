@@ -3,7 +3,7 @@ CHAPTERS=$(wildcard _chapters/chapter-*.markdown)
 all : .build
 
 publish : .build
-	scp -r .build/* www.stdplus.org:~/html/subdomains/www
+	scp -r .build/* www.stdplus.org:~/public_html/
 
 serve : .build
 	bundle exec jekyll serve --destination .build --host 0.0.0.0 --port 4001
